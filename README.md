@@ -23,6 +23,15 @@ dockerコマンド
 
     docker network inspect docker-laravel-handson_default
 
+    docker-compose down --rmi all --volumes --remove-orphans
+    環境全破壊
+
+    docker compose logs
+    # -f でログウォッチ
+    docker compose logs -f
+    # サービス名を指定してログを表示
+    docker compose logs -f app
+
 laravelコマンド
     docker compose exec app bash
 
@@ -38,9 +47,24 @@ laravelコマンド
         $user->password = Hash::make('secret');
         $user->save();
 
+    php artisan key:generate
+
+    php artisan storage:link
+    public/storage から storage/app/public へのシンボリックリンクを張る。
+    システムで生成したファイル等をブラウザからアクセスできるよう公開するためにシンボリックリンクを張っている。
+
+    chmod -R 777 storage bootstrap/cache
+    storage, bootstrap/cache はフレームワークからファイル書き込みが発生するので、書き込み権限を与える必要がある。
+
 dbコマンド
     docker compose exec db bash
 
     mysql -u $MYSQL_USER -p$MYSQL_PASSWORD $MYSQL_DATABASE
 
+    docker-compose exec db bash -c 'mysql -u${MYSQL_USER} -p${MYSQL_PASSWORD} ${MYSQL_DATABASE}'
+
     SELECT * FROM users;
+
+    show tables;
+
+    desc users;
