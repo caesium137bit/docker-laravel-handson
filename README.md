@@ -9,6 +9,8 @@ cd Documents/Github/docker-laravel-handson
 
     https://blog.capilano-fw.com/?p=8015#Laravel_Mix_5_6
 
+    https://reffect.co.jp/laravel/laravel8-vue3
+
 dockerコマンド
     docker compose up -d --build
 
