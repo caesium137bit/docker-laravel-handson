@@ -3,6 +3,10 @@
 参考URL
     https://qiita.com/ucan-lab/items/56c9dc3cf2e6762672f4
 
+    https://qiita.com/3no3_tw/items/25cb7c0c09d51b56eb5a
+
+    https://blog.capilano-fw.com/?p=8015#Laravel_Mix_5_6
+
 dockerコマンド
     docker compose up -d --build
 
@@ -68,3 +72,15 @@ dbコマンド
     show tables;
 
     desc users;
+
+npmコマンド
+    npm install vue@next --save-dev
+
+    npm install laravel-mix --save-dev
+
+    npm install axios
+
+    npm run dev
+
+gitコマンド
+    git reset --hard xxxxx(xxxxxにSHAをコピペ)
