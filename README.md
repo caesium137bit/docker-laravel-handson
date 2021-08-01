@@ -1,5 +1,7 @@
 # docker-laravel-handson
 
+cd Documents/Github/docker-laravel-handson
+
 参考URL
     https://qiita.com/ucan-lab/items/56c9dc3cf2e6762672f4
 
@@ -74,13 +76,14 @@ dbコマンド
     desc users;
 
 npmコマンド
-    npm install vue@next --save-dev
-
-    npm install laravel-mix --save-dev
-
-    npm install axios
-
+    npm install
     npm run dev
 
-gitコマンド
-    git reset --hard xxxxx(xxxxxにSHAをコピペ)
+やり直し
+    git reset --hard 6e3e19fcc0ffa9bb93842488935d01e0051d7afb
+    docker compose down
+    docker compose up -d --build
+    docker compose exec app bash
+
+クラスが見つからない時
+    composer dump-autoload
