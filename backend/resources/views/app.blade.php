@@ -21,7 +21,7 @@
     <body>
 
         <div id="app">
-            <test-vue></test-vue>
+            <example-component></example-component>
         </div>
 
     <script src="{{ mix('js/app.js') }}"></script> 
