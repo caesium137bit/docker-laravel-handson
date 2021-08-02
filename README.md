@@ -3,12 +3,11 @@
 cd Documents/Github/docker-laravel-handson
 
 参考URL
+    基盤
     https://qiita.com/ucan-lab/items/56c9dc3cf2e6762672f4
-
+    node.js
     https://qiita.com/3no3_tw/items/25cb7c0c09d51b56eb5a
-
-    https://blog.capilano-fw.com/?p=8015#Laravel_Mix_5_6
-
+    vue3
     https://reffect.co.jp/laravel/laravel8-vue3
 
 dockerコマンド
@@ -89,3 +88,8 @@ npmコマンド
 
 クラスが見つからない時
     composer dump-autoload
+
+502エラー
+    docker-compose.ymlの
+    command: /bin/sh -c "while sleep 1000; do :; done"
+    をコメントアウトすると直る。
