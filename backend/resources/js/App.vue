@@ -1,16 +1,11 @@
 <template>
   <div>
-    <main>
-        <RouterView />
-    </main>
+    <router-view></router-view>
   </div>
 </template>
 
 <script>
-import ExampleComponent from './components/ExampleComponent.vue'
 export default {
-  components: {
-    ExampleComponent
-  }
+
 }
 </script>

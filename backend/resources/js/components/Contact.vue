@@ -19,7 +19,7 @@
     import { ref } from "vue";
     export default {
         setup() {
-            const message = ref("Hello Laravel Vue 3twooooooooo");
+            const message = ref("Contact");
 
             return {
               message
