@@ -2,11 +2,16 @@
   <section class="p-section p-section--chartreuse-yellow">
     <div class="p-section__inner">
       <header class="p-section__header">
-        <h2 class="p-section__title"><slot name="title"></slot></h2>
-        <p class="p-section__sub-title"><slot name="sub-title"></slot></p>
+        <h2 class="p-section__title">
+          <slot name="title"></slot>
+        </h2>
+        <p class="p-section__sub-title">
+          <slot name="sub-title"></slot>
+        </p>
       </header>
       <div class="p-section__content">
-        <slot name="content">
+        <slot name="content"></slot>
+      </div>
     </div>
   </section>
 
@@ -65,6 +70,10 @@
 -->
 </template>
 
-<script></script>
+<script>
+export default {
+};
+</script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+</style>
