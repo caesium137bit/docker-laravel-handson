@@ -1,0 +1,64 @@
+.p-modal {
+    z-index: 100;
+    position: fixed;
+    display: flex;
+    background: rgba(0, 0, 0, 0.8);
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.p-modal__box {
+    position: relative;
+    cursor: default;
+    width: 80%;
+    max-width: 768px;
+    height: auto;
+    max-height: 576px;
+}
+.p-modal__image {
+    border: 3px solid #fff;
+}
+.p-modal__button {
+    position: absolute;
+    top: -24px;
+    right: -24px;
+    background: #DDD;
+    color: #fff;
+    border-radius: 50%;
+    font-size: 20px;
+    border: 4px solid #fff;
+    width: 48px;
+    height: 48px;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.p-modal__button:hover,
+.p-modal__button:focus,
+.p-modal__button:active {
+    border-color: #fff;
+}
+.fade-enter-active,
+.fade-leave-active {
+    transition: opacity 0.5s ease;
+}
+.fade-enter,
+.fade-leave-to {
+    opacity: 0;
+}
+.slide-enter-active,
+.slide-leave-active {
+    transition: top 0.5s ease;
+    top: 0;
+}
+.slide-enter {
+    top: -100px;
+}
+.slide-leave-to {
+    top: 300px;
+}

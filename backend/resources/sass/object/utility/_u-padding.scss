@@ -1,0 +1,18 @@
+$num: 8;
+
+.u- {
+    @for $i from 0 through 10 {
+        &pt-#{$i * $num} {
+            padding-top: #{$i * $num}px !important;
+        }
+        &pr-#{$i * $num} {
+            padding-right: #{$i * $num}px !important;
+        }
+        &pb-#{$i * $num} {
+            padding-bottom: #{$i * $num}px !important;
+        }
+        &pl-#{$i * $num} {
+            padding-left: #{$i * $num}px !important;
+        }
+    }
+}

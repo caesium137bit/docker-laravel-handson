@@ -1,0 +1,39 @@
+.p-hero {
+    position: relative;
+    &__filter {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        backdrop-filter: blur(30px);
+        background-color: rgba(255,255,255,0.1);
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 80%;
+        max-width: 768px;
+        height: 80%;
+        max-height: 432px;
+        
+    }
+    &__title {
+        font-size: 3.2rem;
+    }
+    &__subtitle {
+        margin-top: 16px;
+        font-size: 1.6rem;
+    }
+}
+
+@media screen and (min-width:768px) { 
+    .p-hero {
+        &__title {
+            font-size: 6.4rem;
+        }
+        &__subtitle {
+            margin-top: 32px;
+            font-size: 3.2rem;
+        }
+    }
+}

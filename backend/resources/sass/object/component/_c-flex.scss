@@ -1,0 +1,36 @@
+.c-flex {
+    display: flex;
+    flex-wrap: wrap;
+    //端のアイテムの余白を相殺
+    margin: 0 -16px;
+    &--col-center {
+        justify-content: center;
+    }
+    &--col-space-between {
+        justify-content: space-between;
+    }
+    &--row-center {
+        align-items: center;
+    }
+    &--reverse {
+        flex-direction: row-reverse;
+    }
+    &__item {
+        padding: 16px;
+    }
+    @for $i from 1 through 12 {
+        &__item-#{$i} {
+            width: calc(100% * #{$i} / 12);
+        }
+        @media screen and (max-width: 767px) {
+            &__item-sm-#{$i} {
+                width: calc(100% * #{$i} / 12);
+            }
+        }
+        @media screen and (min-width: 768px) {
+            &__item-lg-#{$i} {
+                width: calc(100% * #{$i} / 12);
+            }
+        }
+    }
+}

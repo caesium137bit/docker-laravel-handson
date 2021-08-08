@@ -19,7 +19,7 @@
     import { ref } from "vue";
     export default {
         setup() {
-            const message = ref("About");
+            const message = ref("Abouttest");
 
             return {
               message

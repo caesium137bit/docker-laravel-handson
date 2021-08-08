@@ -1,0 +1,18 @@
+$num: 8;
+
+.u- {
+    @for $i from 0 through 10 {
+        &mt-#{$i * $num} {
+            margin-top: #{$i * $num}px !important;
+        }
+        &mr-#{$i * $num} {
+            margin-right: #{$i * $num}px !important;
+        }
+        &mb-#{$i * $num} {
+            margin-bottom: #{$i * $num}px !important;
+        }
+        &ml-#{$i * $num} {
+            margin-left: #{$i * $num}px !important;
+        }
+    }
+}

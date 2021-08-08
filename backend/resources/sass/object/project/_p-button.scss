@@ -1,0 +1,26 @@
+.p-button {
+    position: relative;
+    display: inline-block;
+    padding: 1rem 3rem;
+    cursor: pointer;
+    transition: all 0.3s;
+    text-align: center;
+    vertical-align: middle;
+    letter-spacing: 0.2rem;
+    border-radius: 100vh;
+    color: #fff;
+    border: 0.2rem solid #fff;
+    background-image: linear-gradient(to right, #fa709a 0%, #fee140 100%);
+    box-shadow: 0 0.8rem 1.6rem rgba(0, 0, 0, 0.3);
+}
+
+.p-button:hover,
+.p-button:focus {
+    transform: translate(0, 4px);
+    box-shadow: 0 0.6rem 1.2rem rgba(0, 0, 0, 0.2);
+}
+
+.p-button:active {
+    transform: translate(0, 4px);
+    box-shadow: 0 0.4rem 0.8rem rgba(0, 0, 0, 0.1);
+}

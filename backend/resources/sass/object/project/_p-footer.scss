@@ -1,0 +1,89 @@
+.p-footer {
+    color: #fff;
+    background-color: #333;
+    &__inner {
+        max-width: 960px;
+        width: 100%;
+        height: 100%;
+        padding: 0 16px 16px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__nav {
+        text-align: center;
+        background-color: #ccc;
+    }
+    &__nav-item {
+        padding: 16px;
+        font-size: 1.6rem;
+        border: 1px solid #ddd;
+        letter-spacing: 0.3rem;
+    }
+    &__logo {
+        margin-top: 16px;
+        height: 160px;
+    }
+    &__copyright {
+        margin-top: 16px;
+    }
+}
+
+// ==========================================================================
+// Large
+// ==========================================================================
+
+@media screen and (min-width: 768px) {
+    .p-footer {
+        &__nav {
+            display: flex;
+            justify-content: center;
+            background-color: #333;
+            padding: 16px;
+        }
+        &__nav-item {
+            font-size: 1.6rem;
+            position: relative;
+            border: none;
+            &:not(:last-child)::after {
+                content: "";
+                display: block;
+                position: absolute;
+                top: 12px;
+                right: 0px;
+                width: 2px;
+                height: 24px;
+                background: #bb9d59;
+                transform: rotateZ(45deg);
+            }
+        }
+        &__nav-link {
+            &::after {
+                content: "";
+                display: block;
+                position: absolute;
+                left: 0;
+                height: 2px;
+                width: 100%;
+                background-color: #bb9d59;
+                transition: transform 300ms;
+                transform: scaleX(0);
+            }
+            &:hover::after {
+                transform: scaleX(1);
+            }
+        }
+        &__logo {
+            margin-top: 0;
+            :hover {
+                opacity: 0.9;
+                transition: all 1s ease;
+            }
+        }
+        &__copyright {
+            margin-top: 32px;
+        }
+    }
+}

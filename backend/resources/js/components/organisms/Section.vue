@@ -1,18 +1,16 @@
 <template>
-  <div class="p-hero">
-    <img
-      src="images/sample_1280×720.png"
-      alt="ヒーロー"
-      class="p-hero__image"
-      width="1280"
-      height="720"
-    />
-    <div class="p-hero__filter">
-      <h1 class="p-hero__title">国旗辞典</h1>
-      <p class="p-hero__subtitle">世界の国旗一覧</p>
+  <section class="p-section p-section--chartreuse-yellow">
+    <div class="p-section__inner">
+      <header class="p-section__header">
+        <h2 class="p-section__title"><slot name="title"></slot></h2>
+        <p class="p-section__sub-title"><slot name="sub-title"></slot></p>
+      </header>
+      <div class="p-section__content">
+        <slot name="content">
     </div>
-  </div>
+  </section>
 
+  <!--
   <section class="p-section p-section--chartreuse-yellow">
     <div class="p-section__inner">
       <header class="p-section__header">
@@ -64,10 +62,9 @@
       </div>
     </div>
   </section>
+-->
 </template>
 
-<script>
-</script>
+<script></script>
 
-<style lang="scss" scoped>
-</style>
+<style lang="scss" scoped></style>

@@ -1,0 +1,47 @@
+// -----------------------------------------------------------------
+// library
+// -----------------------------------------------------------------
+
+.VueCarousel {
+    width: 75%;
+    max-width: 960px;
+    &-navigation-button {
+        font-size: 32px;
+        outline: none !important;
+    }
+    &-dot-container {
+        margin-top: 16px !important;  
+    }
+    &-dot {
+        width: 16px !important;
+        height: 16px !important;
+        padding: 0px !important;
+        margin: 0px 8px !important;
+        box-sizing: border-box !important;
+        border: 2px solid red !important;
+        outline: none !important;
+        &--active {
+            background-color: red !important;
+        }
+    }
+}
+
+// -----------------------------------------------------------------
+// customize
+// -----------------------------------------------------------------
+
+.v-slide {
+    width: 100%;
+    background-color: #62caaa;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    border: 2px solid #fff;
+    font-size: 30px;
+    border-radius: 10px;
+    &__image {
+        width: 100%;
+        height: auto;
+    }
+}
