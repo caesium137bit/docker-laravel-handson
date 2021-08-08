@@ -13,6 +13,9 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
+        $this->call(NationsTableSeeder::class);
+        $this->call(QuizzesTableSeeder::class);
+        $this->call(NationQuizTableSeeder::class);
         // \App\Models\User::factory(10)->create();
     }
 }
