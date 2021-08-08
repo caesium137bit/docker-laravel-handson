@@ -1,79 +1,87 @@
 <template>
-  <section class="p-section p-section--chartreuse-yellow">
-    <div class="p-section__inner">
-      <header class="p-section__header">
-        <h2 class="p-section__title">
-          <slot name="title"></slot>
+  <section class="section" :class="classes">
+    <div class="section_inner">
+      <header class="section_header">
+        <h2 class="section_title">
+          {{ title }}
         </h2>
-        <p class="p-section__sub-title">
-          <slot name="sub-title"></slot>
+        <p class="section_sub-title">
+          {{ sub_title }}
         </p>
       </header>
-      <div class="p-section__content">
+      <div class="section_content">
         <slot name="content"></slot>
       </div>
     </div>
   </section>
-
-  <!--
-  <section class="p-section p-section--chartreuse-yellow">
-    <div class="p-section__inner">
-      <header class="p-section__header">
-        <h2 class="p-section__title">About</h2>
-        <p class="p-section__sub-title">国旗辞典について</p>
-      </header>
-      <div class="p-section__content">
-        <div class="c-flex">
-          <img
-            class="c-flex__item c-flex__item-sm-12 c-flex__item-lg-6"
-            src="images/sample_752×564.png"
-            alt=""
-            width="752"
-            height="564"
-          />
-          <p class="c-flex__item c-flex__item-sm-12 c-flex__item-lg-6">
-            ダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキスト
-          </p>
-        </div>
-        <div class="u-mt-16 u-text-center">
-          <button class="p-button"><a href="/gallery">詳しくはこちら</a></button>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="p-section p-section--sky-blue">
-    <div class="p-section__inner">
-      <header class="p-section__header">
-        <h2 class="p-section__title">Contact</h2>
-        <p class="p-section__sub-title"></p>
-      </header>
-      <div class="p-section__content">
-        <div class="c-flex">
-          <img
-            class="c-flex__item c-flex__item-sm-12 c-flex__item-lg-6"
-            src="images/sample_752×564.png"
-            alt=""
-            width="752"
-            height="564"
-          />
-          <p class="c-flex__item c-flex__item-sm-12 c-flex__item-lg-6">
-            ダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキスト
-          </p>
-        </div>
-        <div class="u-mt-16 u-text-center">
-          <button class="p-button"><a href="/gallery">お問い合わせはこちら</a></button>
-        </div>
-      </div>
-    </div>
-  </section>
--->
 </template>
 
 <script>
 export default {
+  name: 'Section',
+  props: {
+    title: {
+      type: String
+    },
+    sub_title: {
+      type: String
+    },
+    background_color: {
+      type: String,
+      default: 'chartreuse-yellow',
+      validator(val) {
+        return [
+          'chartreuse-yellow',
+          'sky-blue'
+        ].includes(val);
+      }
+    }
+  },
+  computed: {
+    classes() {
+      return ['_' + this.background_color];
+    }
+  }
 };
 </script>
 
 <style lang="scss" scoped>
+.section {
+  &._chartreuse-yellow {
+    background-color: rgba(254, 242, 99, 0.24);
+  }
+  &._sky-blue {
+    background-color: rgba(160, 216, 239, 0.24);
+  }
+  &_inner {
+    max-width: 960px;
+    padding: 32px 16px;
+    margin: 0 auto;
+  }
+  &_title {
+    font-size: 2.4rem;
+    text-align: center;
+  }
+  &_sub-title {
+    display: flex;
+    align-items: center;
+    max-width: 320px;
+    margin: 8px auto 0;
+    &::before,
+    &::after {
+      border-top: 1px solid;
+      content: "";
+      flex-grow: 1;
+    }
+    &::before {
+      margin-right: 16px;
+    }
+    &::after {
+      margin-left: 16px;
+    }
+  }
+  &_content {
+    margin-top: 16px;
+  }
+}
 </style>

@@ -93,3 +93,6 @@ npmコマンド
     docker-compose.ymlの
     command: /bin/sh -c "while sleep 1000; do :; done"
     をコメントアウトすると直る。
+
+class名付け方
+    .ComponentName_Element._modifire

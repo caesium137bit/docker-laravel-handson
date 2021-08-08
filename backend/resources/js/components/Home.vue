@@ -13,9 +13,7 @@
     </div>
   </div>
 
-  <Section>
-    <template v-slot:title> About </template>
-    <template v-slot:sub-title> About </template>
+  <Section title="About" sub_title="国旗辞典について" background_color="sky-blue">
     <template v-slot:content>
       <div class="c-flex">
         <img

@@ -1143,42 +1143,6 @@ img {
     transform: scaleX(1);
   }
 }
-.p-section--chartreuse-yellow {
-  background-color: rgba(254, 242, 99, 0.24);
-}
-.p-section--sky-blue {
-  background-color: rgba(160, 216, 239, 0.24);
-}
-.p-section__inner {
-  max-width: 960px;
-  padding: 32px 16px;
-  margin: 0 auto;
-}
-.p-section__title {
-  font-size: 2.4rem;
-  text-align: center;
-}
-.p-section__sub-title {
-  display: flex;
-  align-items: center;
-  max-width: 320px;
-  margin: 8px auto 0;
-}
-.p-section__sub-title::before, .p-section__sub-title::after {
-  border-top: 1px solid;
-  content: "";
-  flex-grow: 1;
-}
-.p-section__sub-title::before {
-  margin-right: 16px;
-}
-.p-section__sub-title::after {
-  margin-left: 16px;
-}
-.p-section__content {
-  margin-top: 16px;
-}
-
 /* Project ------------ */
 .VueCarousel {
   width: 75%;
