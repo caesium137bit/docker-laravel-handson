@@ -13,6 +13,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+//Route::get('/quizzes', 'App\Http\Controllers\QuizzesController@getQuizzes');
+
 Route::get('/{any}', function() {
     return view('app');
 })->where('any', '.*');

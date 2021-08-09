@@ -8,9 +8,12 @@ use Illuminate\Support\Facades\DB;
 class QuizzesController extends Controller
 {
 public function getQuizzes(Request $request)
-    {   
-        $ids = $request->input('id');
+    {   //$ids = $request->all();
+        $ids = $request->input('ids');
+        //$ids = $request->ids;
         //$ids = [1,2,3];
+
+        //return $ids;
 
         foreach ($ids as $id) {
             $quiz = DB::table('quizzes')
