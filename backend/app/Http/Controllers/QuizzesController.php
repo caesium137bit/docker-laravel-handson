@@ -18,8 +18,15 @@ public function getQuizzes(Request $request)
             ->where('quizzes.id', $id)
             ->select('quizzes.id', 'quizzes.answer', 'nations.code', 'nations.name')
             ->get();
+
+        $processed_quizzes = [$quizzes[0]->id, $quizzes[0]->answer];
+
+        foreach ($quizzes as $index => $quiz) {
+            $extracted_quizzes = ["code" => $quiz->code,"name" => $quiz->name];
+            $processed_quizzes[] = $extracted_quizzes;
+        };
         
-        return $quizzes;
+        return $processed_quizzes;
     }
 
     /*
