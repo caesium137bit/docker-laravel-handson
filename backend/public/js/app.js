@@ -18290,13 +18290,14 @@ __webpack_require__.r(__webpack_exports__);
       var _this = this;
 
       //const url = 'api/quizzes'
-      var url = "api/quizzes"; //const ids = this.quizIds;
+      var url = "api/quizzes";
+      var params = {
+        ids: [1, 2, 3]
+      }; //const ids = this.quizIds;
       //console.log('デバッグ' + ids)
 
       axios.get(url, {
-        params: {
-          ids: [2, 3]
-        }
+        params: params
       }).then(function (response) {
         _this.quizzes = response.data;
       })["catch"](function (error) {
@@ -19258,20 +19259,28 @@ var _hoisted_2 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("
 /* HOISTED */
 );
 
-var _hoisted_3 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", {
+var _hoisted_3 = {
   "class": "p-hero__filter"
-}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("h1", {
+};
+
+var _hoisted_4 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("h1", {
   "class": "p-hero__title"
-}, "国旗辞典"), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("p", {
+}, "国旗辞典", -1
+/* HOISTED */
+);
+
+var _hoisted_5 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("p", {
   "class": "p-hero__subtitle"
-}, "世界の国旗一覧")], -1
+}, "世界の国旗一覧", -1
 /* HOISTED */
 );
 
 (0,vue__WEBPACK_IMPORTED_MODULE_0__.popScopeId)();
 
 var render = /*#__PURE__*/_withId(function (_ctx, _cache, $props, $setup, $data, $options) {
-  return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createBlock)("div", _hoisted_1, [_hoisted_2, _hoisted_3]);
+  return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createBlock)("div", _hoisted_1, [_hoisted_2, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", _hoisted_3, [_hoisted_4, _hoisted_5, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("p", null, "test" + (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(_ctx.quizzes), 1
+  /* TEXT */
+  )])]);
 });
 
 /***/ }),

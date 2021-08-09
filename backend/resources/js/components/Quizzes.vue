@@ -10,6 +10,7 @@
     <div class="p-hero__filter">
       <h1 class="p-hero__title">国旗辞典</h1>
       <p class="p-hero__subtitle">世界の国旗一覧</p>
+      <p>test{{quizzes}}</p>
     </div>
   </div>
 </template>
@@ -31,20 +32,21 @@ export default {
     getQuizzes() {
       //const url = 'api/quizzes'
       const url = "api/quizzes";
+      const params = {
+        ids: [1, 2, 3],
+      };
       //const ids = this.quizIds;
       //console.log('デバッグ' + ids)
 
       axios
         .get(url, {
-          params: {
-            ids:[2,3]
-        }
-      })
+          params: params,
+        })
         .then((response) => {
           this.quizzes = response.data;
         })
         .catch((error) => {
-          alert(error + "問題の読み込みに失敗しました。");
+          alert("次のエラーにより問題の読み込みに失敗しました。" + error);
         })
         .finally(() => {
           console.log(this.quizzes);
