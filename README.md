@@ -96,3 +96,14 @@ npmコマンド
 
 class名付け方
     .ComponentName_Element._modifire
+
+マイグレート
+    php artisan make:migration create_tests_table --create=tests
+    //php artisan make:migration ファイル名 --create=テーブル名
+
+    php artisan migrate:fresh
+    php artisan migrate:fresh --seed
+
+    php artisan make:seeder QuizzesTableSeeder
+
+    php artisan make:controller QuizzesController
