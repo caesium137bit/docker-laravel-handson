@@ -18277,12 +18277,51 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
     return {
+      answers: [],
+      quizIndex: 0,
       quizzes: []
+      /*
+      quizzes: [{
+              correct: "日本",
+              nations: [{
+                      code: "jp",
+                      name: "日本",
+                  },
+                  {
+                      code: "us",
+                      name: "アメリカ",
+                  },
+              ],
+          },
+          {
+              correct: "中国",
+              nations: [{
+                      code: "cn",
+                      name: "中国",
+                  },
+                  {
+                      code: "ca",
+                      name: "カナダ",
+                  },
+              ],
+          },
+      ],
+      */
+
     };
   },
   computed: {
-    quizIds: function quizIds() {
-      return [1, 2, 3]; //return this.$route.params.id;
+    /*
+      quizIds() {
+          return [1, 2, 3];
+          //return this.$route.params.id;
+      },
+    */
+    currentQuiz: function currentQuiz() {
+      return this.quizzes[this.quizIndex];
+    },
+    completed: function completed() {
+      return this.quizzes.length === this.answers.length;
     }
   },
   methods: {
@@ -18301,10 +18340,31 @@ __webpack_require__.r(__webpack_exports__);
       }).then(function (response) {
         _this.quizzes = response.data;
       })["catch"](function (error) {
-        alert(error + "問題の読み込みに失敗しました。");
+        alert("次のエラーにより問題の読み込みに失敗しました。" + error);
       })["finally"](function () {
         console.log(_this.quizzes);
       });
+    },
+    onClickAnswer: function onClickAnswer(name) {
+      var isCorrect = null;
+
+      if (name === this.currentQuiz.correct) {
+        isCorrect = true;
+      } else {
+        isCorrect = false;
+      }
+
+      var answer = {
+        index: this.quizIndex,
+        id: this.currentQuiz.id,
+        isCorrect: isCorrect
+      };
+      this.answers.push(answer);
+      console.log(this.answers.length);
+
+      if (!this.completed) {
+        this.quizIndex++;
+      }
     }
   },
   mounted: function mounted() {
@@ -19246,41 +19306,100 @@ var _withId = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.withScopeId)("dat
 (0,vue__WEBPACK_IMPORTED_MODULE_0__.pushScopeId)("data-v-6feff018");
 
 var _hoisted_1 = {
-  "class": "p-hero"
+  "class": "l-main",
+  style: {
+    "display": "flex",
+    "flex-direction": "column",
+    "align-items": "center",
+    "justify-content": "center"
+  }
 };
-
-var _hoisted_2 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("img", {
-  src: "images/sample_1280×720.png",
-  alt: "ヒーロー",
-  "class": "p-hero__image",
-  width: "1280",
-  height: "720"
-}, null, -1
-/* HOISTED */
-);
-
+var _hoisted_2 = {
+  "class": "p-quizzes"
+};
 var _hoisted_3 = {
-  "class": "p-hero__filter"
+  key: 0,
+  "class": "p-quizzes__child"
+};
+var _hoisted_4 = {
+  "class": "p-heading"
+};
+var _hoisted_5 = {
+  "class": "p-button-group p-button-group--column"
+};
+var _hoisted_6 = {
+  key: 1,
+  "class": "p-quizzes__child"
 };
 
-var _hoisted_4 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("h1", {
-  "class": "p-hero__title"
-}, "国旗辞典", -1
+var _hoisted_7 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("h2", {
+  "class": "p-heading"
+}, "最終結果", -1
 /* HOISTED */
 );
 
-var _hoisted_5 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("p", {
-  "class": "p-hero__subtitle"
-}, "世界の国旗一覧", -1
+var _hoisted_8 = {
+  "class": "p-list--large"
+};
+var _hoisted_9 = {
+  "class": "p-list"
+};
+var _hoisted_10 = {
+  key: 0
+};
+var _hoisted_11 = {
+  key: 1
+};
+
+var _hoisted_12 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)("不正解");
+
+var _hoisted_13 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("br", null, null, -1
 /* HOISTED */
 );
 
 (0,vue__WEBPACK_IMPORTED_MODULE_0__.popScopeId)();
 
 var render = /*#__PURE__*/_withId(function (_ctx, _cache, $props, $setup, $data, $options) {
-  return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createBlock)("div", _hoisted_1, [_hoisted_2, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", _hoisted_3, [_hoisted_4, _hoisted_5, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("p", null, "test" + (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(_ctx.quizzes), 1
+  return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createBlock)("div", null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("p", null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(_ctx.quizzes), 1
   /* TEXT */
-  )])]);
+  ), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("main", _hoisted_1, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", _hoisted_2, [!$options.completed ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createBlock)("div", _hoisted_3, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("h2", _hoisted_4, "第 " + (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(_ctx.quizIndex + 1) + " 問", 1
+  /* TEXT */
+  ), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("\n                                <img class=\"p-quizzes__image\" src=\"images/sample_752×564.png\" alt=\"\">\n                                "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", _hoisted_5, [((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.renderList)($options.currentQuiz.nations, function (nation) {
+    return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createBlock)("button", {
+      "class": "p-button",
+      type: "button",
+      key: nation.code,
+      onClick: function onClick($event) {
+        return $options.onClickAnswer(nation.name);
+      }
+    }, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(nation.name), 9
+    /* TEXT, PROPS */
+    , ["onClick"]);
+  }), 128
+  /* KEYED_FRAGMENT */
+  ))])])) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true), $options.completed ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createBlock)("div", _hoisted_6, [_hoisted_7, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("ul", _hoisted_8, [((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.renderList)(_ctx.answers, function (answer) {
+    return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createBlock)("li", {
+      "class": "p-list__item",
+      key: answer.index
+    }, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(" 第 " + (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(answer.index + 1) + " 問 ", 1
+    /* TEXT */
+    ), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("ul", _hoisted_9, [((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.renderList)(_ctx.quizzes[answer.index].nations, function (nation) {
+      return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createBlock)("li", {
+        "class": "p-list__item",
+        key: nation.code
+      }, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(nation.name), 1
+      /* TEXT */
+      );
+    }), 128
+    /* KEYED_FRAGMENT */
+    ))]), answer.isCorrect === true ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createBlock)("span", _hoisted_10, "正解！(" + (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(_ctx.quizzes[answer.index].correct) + ")", 1
+    /* TEXT */
+    )) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true), answer.isCorrect === false ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createBlock)("span", _hoisted_11, [_hoisted_12, _hoisted_13, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)("正解は「" + (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(_ctx.quizzes[answer.index].correct) + "」でした。", 1
+    /* TEXT */
+    )])) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true)]);
+  }), 128
+  /* KEYED_FRAGMENT */
+  ))])])) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true)])])]);
 });
 
 /***/ }),

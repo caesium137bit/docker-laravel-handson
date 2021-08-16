@@ -25,13 +25,35 @@ public function getQuizzes(Request $request)
             ->orderby('nations.code')
             ->get();
 
-            $processed_quiz = [$quiz[0]->id, $quiz[0]->answer];
+            /*
+            $obj = (object) [
+                'correct' => '日本',
+                'nation' => ['code' => 'jp','name' => '日本'],
+                            ['code' => 'cn','name' => '中華人民共和国']
+            ];
+            */
 
-            foreach ($quiz as $index => $option) {
-                $processed_quiz[] = ["code" => $option->code,"name" => $option->name];
+            /*
+            $obj = (object) [
+                'name'   => 'Obi-Wan Kenobi',
+                'gender' => 'Male',
+                'age'    => '60',
+                'lank'   => 'JEDI Master',
+                'weapon' => 'Lightsaber'
+            ];
+            */
+
+            $processed_quizzes = ['correct' => $quiz[0]->answer];
+            //$processed_quiz = ["id" => $quiz[0]->id, "correct" => $quiz[0]->answer];
+
+            foreach ($quiz as $index => $nations) {
+                $nation_obj_array[] = (object) [
+                    'code' => $nations->code,
+                    'name' => $nations->name
+                ];
             };   
 
-            $processed_quizzes[] = $processed_quiz;       
+            $processed_quizzes[] = ['nations' => $nation_obj_array];       
         }   
         return $processed_quizzes;  
 

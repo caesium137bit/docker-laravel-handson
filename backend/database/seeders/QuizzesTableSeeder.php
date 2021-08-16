@@ -15,17 +15,17 @@ class QuizzesTableSeeder extends Seeder
     public function run()
     {
         $param = [
-            'answer' => 'jp',
+            'answer' => '日本',
         ];
         DB::table('quizzes')->insert($param);
         
         $param = [
-            'answer' => 'cn',
+            'answer' => '中国',
         ];
         DB::table('quizzes')->insert($param);
 
         $param = [
-            'answer' => 'in',
+            'answer' => 'インド',
         ];
         DB::table('quizzes')->insert($param);
     }
