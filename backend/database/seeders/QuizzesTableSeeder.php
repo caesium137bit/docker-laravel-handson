@@ -20,7 +20,7 @@ class QuizzesTableSeeder extends Seeder
         DB::table('quizzes')->insert($param);
         
         $param = [
-            'answer' => '中国',
+            'answer' => '中華人民共和国',
         ];
         DB::table('quizzes')->insert($param);
 

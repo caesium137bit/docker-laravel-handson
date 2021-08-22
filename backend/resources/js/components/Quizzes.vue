@@ -79,6 +79,7 @@ export default {
         */
         currentQuiz() {
             return this.quizzes[this.quizIndex];
+            //return this.quizzes[2];
         },
         completed() {
             return (this.quizzes.length === this.answers.length);
@@ -121,7 +122,7 @@ export default {
 
             this.answers.push(answer)
 
-            console.log(this.answers.length)
+            console.log(this.quizzes[this.quizIndex])
 
             if (!this.completed) {
                 this.quizIndex++;

@@ -18318,7 +18318,7 @@ __webpack_require__.r(__webpack_exports__);
       },
     */
     currentQuiz: function currentQuiz() {
-      return this.quizzes[this.quizIndex];
+      return this.quizzes[this.quizIndex]; //return this.quizzes[2];
     },
     completed: function completed() {
       return this.quizzes.length === this.answers.length;
@@ -18360,7 +18360,7 @@ __webpack_require__.r(__webpack_exports__);
         isCorrect: isCorrect
       };
       this.answers.push(answer);
-      console.log(this.answers.length);
+      console.log(this.quizzes[this.quizIndex]);
 
       if (!this.completed) {
         this.quizIndex++;
