@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div v-cloak>
     <header class="l-header">
       <Header></Header>
     </header>
@@ -19,6 +19,10 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+[v-cloak] {
+  display: none;
+}
+
 // ==========================================================================
 // l-header
 // ==========================================================================
@@ -47,7 +51,7 @@ export default {
 
 .l-main {
   width: 100%;
-  margin-top: 80px;
+  padding-top: 80px;
 }
 
 // ==========================================================================

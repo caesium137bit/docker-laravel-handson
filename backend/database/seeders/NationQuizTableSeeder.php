@@ -57,8 +57,8 @@ class NationQuizTableSeeder extends Seeder
         DB::table('nation_quiz')->insert($param);
 
         $param = [
-            'nation_id' => 4,
-            'quiz_id' => 3,
+            'nation_id' => 8,
+            'quiz_id' => 2,
         ];
         DB::table('nation_quiz')->insert($param);
 

@@ -18277,10 +18277,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
     return {
+      isLoading: true,
       answers: [],
       quizIndex: 0,
       quizzes: [],
-      code: 'cn'
+      code: "cn"
       /*
             quizzes: [{
                     correct: "日本",
@@ -18344,6 +18345,7 @@ __webpack_require__.r(__webpack_exports__);
         alert("次のエラーにより問題の読み込みに失敗しました。" + error);
       })["finally"](function () {
         console.log(_this.quizzes);
+        _this.isLoading = false;
       });
     },
     onClickAnswer: function onClickAnswer(name) {
@@ -18368,9 +18370,15 @@ __webpack_require__.r(__webpack_exports__);
       }
     }
   },
-  mounted: function mounted() {
+  created: function created() {
     this.getQuizzes();
   }
+  /*
+  mounted() {
+    this.getQuizzes();
+  },
+  */
+
 });
 
 /***/ }),
@@ -19288,10 +19296,10 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
 
 /***/ }),
 
-/***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[2]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/components/Quizzes.vue?vue&type=template&id=6feff018":
-/*!*****************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[2]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/components/Quizzes.vue?vue&type=template&id=6feff018 ***!
-  \*****************************************************************************************************************************************************************************************************************************************************************************/
+/***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[2]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/components/Quizzes.vue?vue&type=template&id=6feff018&scoped=true":
+/*!*****************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[2]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/components/Quizzes.vue?vue&type=template&id=6feff018&scoped=true ***!
+  \*****************************************************************************************************************************************************************************************************************************************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -19301,7 +19309,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.esm-bundler.js");
 
+
+var _withId = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.withScopeId)("data-v-6feff018");
+
+(0,vue__WEBPACK_IMPORTED_MODULE_0__.pushScopeId)("data-v-6feff018");
+
 var _hoisted_1 = {
+  key: 0,
   "class": "l-main",
   style: {
     "display": "flex",
@@ -19353,10 +19367,10 @@ var _hoisted_13 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(
 /* HOISTED */
 );
 
-function render(_ctx, _cache, $props, $setup, $data, $options) {
-  return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createBlock)("div", null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("p", null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(_ctx.quizzes), 1
-  /* TEXT */
-  ), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("main", _hoisted_1, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", _hoisted_2, [!$options.completed ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createBlock)("div", _hoisted_3, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("h2", _hoisted_4, "第 " + (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(_ctx.quizIndex + 1) + " 問", 1
+(0,vue__WEBPACK_IMPORTED_MODULE_0__.popScopeId)();
+
+var render = /*#__PURE__*/_withId(function (_ctx, _cache, $props, $setup, $data, $options) {
+  return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createBlock)("div", null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("\n    <p>{{ quizzes }}</p>\n    "), !_ctx.isLoading ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createBlock)("main", _hoisted_1, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", _hoisted_2, [!$options.completed ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createBlock)("div", _hoisted_3, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("h2", _hoisted_4, "第 " + (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(_ctx.quizIndex + 1) + " 問", 1
   /* TEXT */
   ), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("\n          <img class=\"p-quizzes__image\" src=\"images/national_flags/jp.png\" alt=\"\" />\n          "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("img", {
     "class": "p-quizzes__image",
@@ -19399,8 +19413,8 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     )])) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true)]);
   }), 128
   /* KEYED_FRAGMENT */
-  ))])])) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true)])])]);
-}
+  ))])])) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true)])])) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true)]);
+});
 
 /***/ }),
 
@@ -24104,7 +24118,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".l-header[data-v-f348271a] {\n  z-index: 10;\n  position: fixed;\n  top: 0;\n  width: 100%;\n  height: 80px;\n}\n@media screen and (min-width: 768px) {\n.l-header[data-v-f348271a] {\n    height: 104px;\n}\n}\n.l-main[data-v-f348271a] {\n  width: 100%;\n  margin-top: 80px;\n}\n@media screen and (min-width: 768px) {\n.l-main[data-v-f348271a] {\n    margin-top: 104px;\n}\n}", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "[v-cloak][data-v-f348271a] {\n  display: none;\n}\n.l-header[data-v-f348271a] {\n  z-index: 10;\n  position: fixed;\n  top: 0;\n  width: 100%;\n  height: 80px;\n}\n@media screen and (min-width: 768px) {\n.l-header[data-v-f348271a] {\n    height: 104px;\n}\n}\n.l-main[data-v-f348271a] {\n  width: 100%;\n  padding-top: 80px;\n}\n@media screen and (min-width: 768px) {\n.l-main[data-v-f348271a] {\n    margin-top: 104px;\n}\n}", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -24129,6 +24143,30 @@ __webpack_require__.r(__webpack_exports__);
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
 ___CSS_LOADER_EXPORT___.push([module.id, ".p-header[data-v-5761a7b7] {\n  height: 100%;\n  box-shadow: 0 4px 8px rgba(51, 51, 51, 0.8);\n  background-color: #333;\n}\n.p-header__inner[data-v-5761a7b7] {\n  max-width: 960px;\n  width: 100%;\n  height: 100%;\n  padding: 16px;\n  margin: 0 auto;\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n}\n.p-header__logo[data-v-5761a7b7] {\n  height: 48px;\n}\n.p-header__nav[data-v-5761a7b7] {\n  height: 100%;\n}\n@media screen and (min-width: 768px) {\n.p-header__logo[data-v-5761a7b7] :hover {\n    opacity: 0.9;\n    transition: all 1s ease;\n}\n}\n.p-logo[data-v-5761a7b7] {\n  height: 100%;\n  width: auto;\n}\n.p-hamburger[data-v-5761a7b7] {\n  display: inline-block;\n  cursor: pointer;\n  position: relative;\n  width: 48px;\n  height: 48px;\n  border-radius: 50%;\n  border: 4px solid #f9d8ae;\n  transition: all 0.3s ease-in-out;\n  z-index: 20;\n}\n.p-hamburger[data-v-5761a7b7]:hover, .p-hamburger[data-v-5761a7b7]:focus {\n  box-shadow: 0 0 8px rgba(255, 255, 255, 0.5);\n}\n.p-hamburger__line[data-v-5761a7b7] {\n  position: absolute;\n  top: 0;\n  right: 0;\n  bottom: 0;\n  left: 0;\n  margin: auto;\n  width: 20px;\n  height: 4px;\n  background-color: #f9d8ae;\n  transition: inherit;\n}\n.p-hamburger__line[data-v-5761a7b7]::before, .p-hamburger__line[data-v-5761a7b7]::after {\n  position: absolute;\n  display: block;\n  width: 100%;\n  height: 100%;\n  background-color: inherit;\n  content: \"\";\n  transition: inherit;\n}\n.p-hamburger__line[data-v-5761a7b7]::before {\n  top: -6px;\n}\n.p-hamburger__line[data-v-5761a7b7]::after {\n  top: 6px;\n}\n.p-hamburger[aria-expanded=true] .p-hamburger__line[data-v-5761a7b7] {\n  background-color: transparent;\n}\n.p-hamburger[aria-expanded=true] .p-hamburger__line[data-v-5761a7b7]::before, .p-hamburger[aria-expanded=true] .p-hamburger__line[data-v-5761a7b7]::after {\n  top: 0;\n  background-color: #f9d8ae;\n}\n.p-hamburger[aria-expanded=true] .p-hamburger__line[data-v-5761a7b7]::before {\n  transform: rotate(45deg);\n}\n.p-hamburger[aria-expanded=true] .p-hamburger__line[data-v-5761a7b7]::after {\n  transform: rotate(-45deg);\n}\n@media screen and (min-width: 768px) {\n.p-hamburger[data-v-5761a7b7] {\n    display: none;\n}\n}\n.p-nav[data-v-5761a7b7] {\n  transition: all 0.3s ease-in-out;\n  z-index: 10;\n  position: fixed;\n  top: -100%;\n  left: 0;\n  height: 100%;\n  width: 100%;\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  align-items: center;\n  background-color: #333;\n}\n.p-nav--open[data-v-5761a7b7] {\n  top: 0;\n}\n.p-nav__item[data-v-5761a7b7] {\n  font-size: 3.2rem;\n  padding: 32px;\n  letter-spacing: 0.3rem;\n  color: #fff;\n}\n@media screen and (min-width: 768px) {\n.p-nav[data-v-5761a7b7] {\n    transition: all 0s 0s ease;\n    z-index: 0;\n    position: static;\n    top: auto;\n    left: auto;\n    flex-direction: row;\n    background-color: transparent;\n}\n.p-nav__item[data-v-5761a7b7] {\n    font-size: 1.6rem;\n    padding: 16px;\n    letter-spacing: 0.3rem;\n    position: relative;\n}\n.p-nav__item[data-v-5761a7b7]:not(:last-child)::after {\n    content: \"\";\n    display: block;\n    position: absolute;\n    top: 12px;\n    right: 0px;\n    width: 2px;\n    height: 24px;\n    background: #bb9d59;\n    transform: rotateZ(45deg);\n}\n.p-nav__link[data-v-5761a7b7]::after {\n    content: \"\";\n    display: block;\n    position: absolute;\n    left: 0;\n    height: 2px;\n    width: 100%;\n    background-color: #bb9d59;\n    transition: transform 300ms;\n    transform: scaleX(0);\n}\n.p-nav__link[data-v-5761a7b7]:hover::after {\n    transform: scaleX(1);\n}\n}", ""]);
+// Exports
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
+
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/dist/cjs.js??clonedRuleSet-12.use[1]!./node_modules/vue-loader/dist/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-12.use[2]!./node_modules/sass-loader/dist/cjs.js??clonedRuleSet-12.use[3]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/components/Quizzes.vue?vue&type=style&index=0&id=6feff018&lang=scss&scoped=true":
+/*!*********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js??clonedRuleSet-12.use[1]!./node_modules/vue-loader/dist/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-12.use[2]!./node_modules/sass-loader/dist/cjs.js??clonedRuleSet-12.use[3]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/components/Quizzes.vue?vue&type=style&index=0&id=6feff018&lang=scss&scoped=true ***!
+  \*********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/***/ ((module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__);
+// Imports
+
+var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
+// Module
+___CSS_LOADER_EXPORT___.push([module.id, ".p-quizzes[data-v-6feff018] {\n  width: 320px;\n  padding: 48px;\n  border-radius: 8%;\n  background: #faffff;\n  box-shadow: 6px 6px 12px #646666, -6px -6px 12px #ffffff;\n}\n.p-quizzes__child[data-v-6feff018] {\n  width: 100%;\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  justify-self: center;\n}\n.p-quizzes__child > *[data-v-6feff018]:not(:first-child) {\n  margin-top: 32px;\n}\n.p-quizzes__image[data-v-6feff018] {\n  border: 1px solid #333;\n}\n.p-button-group[data-v-6feff018] {\n  display: flex;\n  align-items: center;\n  justify-content: center;\n}\n.p-button-group--column[data-v-6feff018] {\n  flex-direction: column;\n}\n.p-button-group--column > *[data-v-6feff018] {\n  width: 100%;\n}\n.p-button-group--column > *[data-v-6feff018]:not(:first-child) {\n  margin-top: 8px;\n}\n.p-button-group--row[data-v-6feff018] {\n  flex-direction: row;\n}\n.p-button-group--row > *[data-v-6feff018] {\n  margin: 0 8px;\n}\n.p-list__item[data-v-6feff018] {\n  padding: 8px;\n}\n.p-list__item[data-v-6feff018]::before {\n  content: \"\";\n  width: 8px;\n  height: 8px;\n  display: inline-block;\n  background-color: #1B6652;\n  border-radius: 50%;\n}", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -55067,6 +55105,36 @@ var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js
 
 /***/ }),
 
+/***/ "./node_modules/style-loader/dist/cjs.js!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-12.use[1]!./node_modules/vue-loader/dist/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-12.use[2]!./node_modules/sass-loader/dist/cjs.js??clonedRuleSet-12.use[3]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/components/Quizzes.vue?vue&type=style&index=0&id=6feff018&lang=scss&scoped=true":
+/*!*************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/style-loader/dist/cjs.js!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-12.use[1]!./node_modules/vue-loader/dist/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-12.use[2]!./node_modules/sass-loader/dist/cjs.js??clonedRuleSet-12.use[3]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/components/Quizzes.vue?vue&type=style&index=0&id=6feff018&lang=scss&scoped=true ***!
+  \*************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! !../../../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js */ "./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js");
+/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _node_modules_css_loader_dist_cjs_js_clonedRuleSet_12_use_1_node_modules_vue_loader_dist_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_12_use_2_node_modules_sass_loader_dist_cjs_js_clonedRuleSet_12_use_3_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_Quizzes_vue_vue_type_style_index_0_id_6feff018_lang_scss_scoped_true__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! !!../../../node_modules/css-loader/dist/cjs.js??clonedRuleSet-12.use[1]!../../../node_modules/vue-loader/dist/stylePostLoader.js!../../../node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-12.use[2]!../../../node_modules/sass-loader/dist/cjs.js??clonedRuleSet-12.use[3]!../../../node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./Quizzes.vue?vue&type=style&index=0&id=6feff018&lang=scss&scoped=true */ "./node_modules/css-loader/dist/cjs.js??clonedRuleSet-12.use[1]!./node_modules/vue-loader/dist/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-12.use[2]!./node_modules/sass-loader/dist/cjs.js??clonedRuleSet-12.use[3]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/components/Quizzes.vue?vue&type=style&index=0&id=6feff018&lang=scss&scoped=true");
+
+            
+
+var options = {};
+
+options.insert = "head";
+options.singleton = false;
+
+var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default()(_node_modules_css_loader_dist_cjs_js_clonedRuleSet_12_use_1_node_modules_vue_loader_dist_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_12_use_2_node_modules_sass_loader_dist_cjs_js_clonedRuleSet_12_use_3_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_Quizzes_vue_vue_type_style_index_0_id_6feff018_lang_scss_scoped_true__WEBPACK_IMPORTED_MODULE_1__.default, options);
+
+
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_css_loader_dist_cjs_js_clonedRuleSet_12_use_1_node_modules_vue_loader_dist_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_12_use_2_node_modules_sass_loader_dist_cjs_js_clonedRuleSet_12_use_3_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_Quizzes_vue_vue_type_style_index_0_id_6feff018_lang_scss_scoped_true__WEBPACK_IMPORTED_MODULE_1__.default.locals || {});
+
+/***/ }),
+
 /***/ "./node_modules/style-loader/dist/cjs.js!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-12.use[1]!./node_modules/vue-loader/dist/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-12.use[2]!./node_modules/sass-loader/dist/cjs.js??clonedRuleSet-12.use[3]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/components/organisms/Header.vue?vue&type=style&index=0&id=64fbff66&lang=scss&scoped=true":
 /*!**********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/style-loader/dist/cjs.js!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-12.use[1]!./node_modules/vue-loader/dist/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-12.use[2]!./node_modules/sass-loader/dist/cjs.js??clonedRuleSet-12.use[3]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/components/organisms/Header.vue?vue&type=style&index=0&id=64fbff66&lang=scss&scoped=true ***!
@@ -55555,12 +55623,16 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var _Quizzes_vue_vue_type_template_id_6feff018__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Quizzes.vue?vue&type=template&id=6feff018 */ "./resources/js/components/Quizzes.vue?vue&type=template&id=6feff018");
+/* harmony import */ var _Quizzes_vue_vue_type_template_id_6feff018_scoped_true__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Quizzes.vue?vue&type=template&id=6feff018&scoped=true */ "./resources/js/components/Quizzes.vue?vue&type=template&id=6feff018&scoped=true");
 /* harmony import */ var _Quizzes_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Quizzes.vue?vue&type=script&lang=js */ "./resources/js/components/Quizzes.vue?vue&type=script&lang=js");
+/* harmony import */ var _Quizzes_vue_vue_type_style_index_0_id_6feff018_lang_scss_scoped_true__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Quizzes.vue?vue&type=style&index=0&id=6feff018&lang=scss&scoped=true */ "./resources/js/components/Quizzes.vue?vue&type=style&index=0&id=6feff018&lang=scss&scoped=true");
 
 
 
-_Quizzes_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__.default.render = _Quizzes_vue_vue_type_template_id_6feff018__WEBPACK_IMPORTED_MODULE_0__.render
+
+;
+_Quizzes_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__.default.render = _Quizzes_vue_vue_type_template_id_6feff018_scoped_true__WEBPACK_IMPORTED_MODULE_0__.render
+_Quizzes_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__.default.__scopeId = "data-v-6feff018"
 /* hot reload */
 if (false) {}
 
@@ -55838,18 +55910,18 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./resources/js/components/Quizzes.vue?vue&type=template&id=6feff018":
-/*!***************************************************************************!*\
-  !*** ./resources/js/components/Quizzes.vue?vue&type=template&id=6feff018 ***!
-  \***************************************************************************/
+/***/ "./resources/js/components/Quizzes.vue?vue&type=template&id=6feff018&scoped=true":
+/*!***************************************************************************************!*\
+  !*** ./resources/js/components/Quizzes.vue?vue&type=template&id=6feff018&scoped=true ***!
+  \***************************************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "render": () => (/* reexport safe */ _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_dist_templateLoader_js_ruleSet_1_rules_2_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_Quizzes_vue_vue_type_template_id_6feff018__WEBPACK_IMPORTED_MODULE_0__.render)
+/* harmony export */   "render": () => (/* reexport safe */ _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_dist_templateLoader_js_ruleSet_1_rules_2_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_Quizzes_vue_vue_type_template_id_6feff018_scoped_true__WEBPACK_IMPORTED_MODULE_0__.render)
 /* harmony export */ });
-/* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_dist_templateLoader_js_ruleSet_1_rules_2_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_Quizzes_vue_vue_type_template_id_6feff018__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!../../../node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[2]!../../../node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./Quizzes.vue?vue&type=template&id=6feff018 */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[2]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/components/Quizzes.vue?vue&type=template&id=6feff018");
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_dist_templateLoader_js_ruleSet_1_rules_2_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_Quizzes_vue_vue_type_template_id_6feff018_scoped_true__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!../../../node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[2]!../../../node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./Quizzes.vue?vue&type=template&id=6feff018&scoped=true */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[2]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/components/Quizzes.vue?vue&type=template&id=6feff018&scoped=true");
 
 
 /***/ }),
@@ -55908,6 +55980,19 @@ __webpack_require__.r(__webpack_exports__);
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _node_modules_style_loader_dist_cjs_js_node_modules_css_loader_dist_cjs_js_clonedRuleSet_12_use_1_node_modules_vue_loader_dist_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_12_use_2_node_modules_sass_loader_dist_cjs_js_clonedRuleSet_12_use_3_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_Gallery_vue_vue_type_style_index_0_id_5761a7b7_lang_scss_scoped_true__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/style-loader/dist/cjs.js!../../../node_modules/css-loader/dist/cjs.js??clonedRuleSet-12.use[1]!../../../node_modules/vue-loader/dist/stylePostLoader.js!../../../node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-12.use[2]!../../../node_modules/sass-loader/dist/cjs.js??clonedRuleSet-12.use[3]!../../../node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./Gallery.vue?vue&type=style&index=0&id=5761a7b7&lang=scss&scoped=true */ "./node_modules/style-loader/dist/cjs.js!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-12.use[1]!./node_modules/vue-loader/dist/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-12.use[2]!./node_modules/sass-loader/dist/cjs.js??clonedRuleSet-12.use[3]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/components/Gallery.vue?vue&type=style&index=0&id=5761a7b7&lang=scss&scoped=true");
+
+
+/***/ }),
+
+/***/ "./resources/js/components/Quizzes.vue?vue&type=style&index=0&id=6feff018&lang=scss&scoped=true":
+/*!******************************************************************************************************!*\
+  !*** ./resources/js/components/Quizzes.vue?vue&type=style&index=0&id=6feff018&lang=scss&scoped=true ***!
+  \******************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_style_loader_dist_cjs_js_node_modules_css_loader_dist_cjs_js_clonedRuleSet_12_use_1_node_modules_vue_loader_dist_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_12_use_2_node_modules_sass_loader_dist_cjs_js_clonedRuleSet_12_use_3_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_Quizzes_vue_vue_type_style_index_0_id_6feff018_lang_scss_scoped_true__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/style-loader/dist/cjs.js!../../../node_modules/css-loader/dist/cjs.js??clonedRuleSet-12.use[1]!../../../node_modules/vue-loader/dist/stylePostLoader.js!../../../node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-12.use[2]!../../../node_modules/sass-loader/dist/cjs.js??clonedRuleSet-12.use[3]!../../../node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./Quizzes.vue?vue&type=style&index=0&id=6feff018&lang=scss&scoped=true */ "./node_modules/style-loader/dist/cjs.js!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-12.use[1]!./node_modules/vue-loader/dist/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-12.use[2]!./node_modules/sass-loader/dist/cjs.js??clonedRuleSet-12.use[3]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/components/Quizzes.vue?vue&type=style&index=0&id=6feff018&lang=scss&scoped=true");
 
 
 /***/ }),
