@@ -18279,7 +18279,8 @@ __webpack_require__.r(__webpack_exports__);
     return {
       answers: [],
       quizIndex: 0,
-      quizzes: []
+      quizzes: [],
+      code: 'cn'
       /*
             quizzes: [{
                     correct: "日本",
@@ -19359,7 +19360,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
   /* TEXT */
   ), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("\n          <img class=\"p-quizzes__image\" src=\"images/national_flags/jp.png\" alt=\"\" />\n          "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("img", {
     "class": "p-quizzes__image",
-    src: $options.currentQuiz.image_src,
+    src: 'images/national_flags/' + $options.currentQuiz.answer_code + '.png',
     alt: ""
   }, null, 8
   /* PROPS */

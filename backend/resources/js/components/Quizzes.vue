@@ -16,7 +16,7 @@
           <!--
           <img class="p-quizzes__image" src="images/national_flags/jp.png" alt="" />
           -->
-          <img class="p-quizzes__image" :src="currentQuiz.image_src" alt="" />
+          <img class="p-quizzes__image" :src="'images/national_flags/' + currentQuiz.answer_code +'.png'" alt="" />
           <div class="p-button-group p-button-group--column">
             <button
               class="p-button"
@@ -64,6 +64,7 @@ export default {
       answers: [],
       quizIndex: 0,
       quizzes: [],
+      code: 'cn',
       /*
             quizzes: [{
                     correct: "日本",

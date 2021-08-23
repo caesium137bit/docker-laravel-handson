@@ -12,7 +12,7 @@ class QuizzesController extends Controller
         $ids = $request->input('ids');
 
         $quizzes = DB::table('quizzes')
-            ->select('quizzes.id', 'quizzes.answer', 'quizzes.image_src', 'nations.code', 'nations.name')
+            ->select('quizzes.id', 'quizzes.answer', 'quizzes.answer_code', 'nations.code', 'nations.name')
             ->join('nation_quiz', 'quizzes.id', '=', 'nation_quiz.quiz_id')
             ->join('nations', 'nation_quiz.nation_id', '=', 'nations.id')
             ->whereIn('quizzes.id', $ids)
@@ -30,7 +30,7 @@ class QuizzesController extends Controller
                     if ($id_flag != $quiz->id) {
                         $temp_obj = (object) [
                             'correct' => $quiz->answer,
-                            'image_src' => $quiz->image_src
+                            'answer_code' => $quiz->answer_code
                         ];
                         $id_flag = $quiz->id;
                     }
@@ -46,6 +46,7 @@ class QuizzesController extends Controller
         }
 
         return $processed_quizzes;
+        //return $quizzes;
 
         /*
         foreach ($ids as $id) {
