@@ -16,16 +16,19 @@ class QuizzesTableSeeder extends Seeder
     {
         $param = [
             'answer' => '日本',
+            'image_src' => 'images/national_flags/jp.png',
         ];
         DB::table('quizzes')->insert($param);
         
         $param = [
             'answer' => '中華人民共和国',
+            'image_src' => 'images/national_flags/cn.png',
         ];
         DB::table('quizzes')->insert($param);
 
         $param = [
             'answer' => 'インド',
+            'image_src' => 'images/national_flags/in.png'
         ];
         DB::table('quizzes')->insert($param);
     }
