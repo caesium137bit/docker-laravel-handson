@@ -1,27 +1,6 @@
 /**
  * Foundation
  * ========================== */
-*,
-*:before,
-*:after {
-  box-sizing: inherit;
-}
-
-html {
-  box-sizing: border-box;
-  font-size: 62.5%;
-}
-
-body {
-  font-size: 1.6rem;
-  color: #333;
-}
-
-img {
-  width: 100%;
-  height: auto;
-}
-
 /*! destyle.css v2.0.2 | MIT License | https://github.com/nicolas-cusan/destyle.css */
 /* Reset box-model and set borders */
 /* ============================================ */
@@ -485,6 +464,28 @@ template {
  */
 [hidden] {
   display: none;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+  background-color: #66b1f2;
+  color: #333;
+}
+
+img {
+  width: 100%;
+  height: auto;
 }
 
 /**
